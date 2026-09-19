@@ -1,0 +1,9 @@
+_davCONVERT v1.0.0
+
+Suite automatica: 17/17 test superati.
+Sintassi JavaScript: verificata.
+Configurazioni JSON: valide.
+Workflow GitHub release: YAML valido e configurato come release stabile.
+Icone Tauri: set completo generato dall’icon.ico definitivo.
+
+La compilazione nativa Tauri/Rust richiede Cargo e le dipendenze di piattaforma.

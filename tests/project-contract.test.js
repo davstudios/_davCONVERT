@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+
+test('Windows launcher sincronizza dipendenze',()=>{const text=fs.readFileSync('RUN-WINDOWS.bat','utf8');assert.match(text,/npm install --no-audit --no-fund/i);assert.match(text,/_davCONVERT v1\.0\.0/);});
+test('Vite preserva isolamento Tauri',()=>{const text=fs.readFileSync('vite.config.js','utf8');assert.match(text,/const host = process\.env\.TAURI_DEV_HOST/);assert.match(text,/src-tauri/);});
+test('dipendenze conversione sono presenti',()=>{const pkg=JSON.parse(fs.readFileSync('package.json','utf8'));assert.equal(pkg.dependencies['@tauri-apps/plugin-dialog'],'2');const cargo=fs.readFileSync('src-tauri/Cargo.toml','utf8');assert.match(cargo,/image = /);});
+test('backend converte senza upload o rete',()=>{const text=fs.readFileSync('src-tauri/src/lib.rs','utf8');assert.match(text,/fn convert_file/);assert.doesNotMatch(text,/reqwest|http::|https:\/\//i);});
+test('interfaccia include drag drop e design suite',()=>{const main=fs.readFileSync('src/main.js','utf8');assert.match(main,/onDragDropEvent/);assert.match(main,/Comprami Un Caffè/);assert.match(main,/davstudios\.it/);const style=fs.readFileSync('src/styles.css','utf8');assert.match(style,/--accent:#006edb/);});
+
+test('icona conversione usa doppia freccia simmetrica',()=>{const main=fs.readFileSync('src/main.js','utf8');assert.match(main,/M5 7h14/);assert.match(main,/M19 17H5/);assert.match(main,/m15 3 4 4-4 4/);assert.match(main,/m9 13-4 4 4 4/);});
+
+test('workflow GitHub pubblica release stabile',()=>{const text=fs.readFileSync('.github/workflows/release.yml','utf8');assert.match(text,/Verify release versions/);assert.match(text,/prerelease:\s*false/);assert.match(text,/Build and publish release/);assert.doesNotMatch(text,/Preview release of _davCONVERT/);});
+test('set icone Tauri completo',()=>{for(const file of ['32x32.png','128x128.png','128x128@2x.png','app-icon.png','icon.ico','icon.icns'])assert.equal(fs.existsSync(`src-tauri/icons/${file}`),true,`${file} mancante`);});
