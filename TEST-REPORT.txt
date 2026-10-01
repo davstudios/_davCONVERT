@@ -1,9 +1,44 @@
-_davCONVERT v1.0.0
+_davCONVERT v26.10.1 — Test report
+Date: 2026-10-01
 
-Suite automatica: 17/17 test superati.
-Sintassi JavaScript: verificata.
-Configurazioni JSON: valide.
-Workflow GitHub release: YAML valido e configurato come release stabile.
-Icone Tauri: set completo generato dall’icon.ico definitivo.
+Automated tests: 18/18 passed
+- Conversion engine: passed
+- Project/release contract: passed
+- GitHub Release description automation contract: passed
+- _davstudios package metadata contract: passed
+- Version synchronization: passed
+- Source checks: passed
 
-La compilazione nativa Tauri/Rust richiede Cargo e le dipendenze di piattaforma.
+Static validation:
+- src/main.js: syntax valid
+- src/convert-engine.js: syntax valid
+- vite.config.js: syntax valid
+- package.json: valid JSON
+- package-lock.json: valid JSON
+- src-tauri/tauri.conf.json: valid JSON
+- src-tauri/capabilities/default.json: valid JSON
+- .github/workflows/release.yml: valid YAML
+
+Bundle metadata:
+- Version: 26.10.1
+- Public tag: v26.10.1
+- Publisher: _davstudios
+- Homepage: https://davstudios.it
+- License: MIT
+- Copyright: © 2026 _davstudios
+- Identifier preserved: studio.dav.convert
+- Linux DEB section: utils
+- Linux DEB priority: optional
+
+Code signing:
+- No trusted commercial Windows code-signing certificate configured.
+- No Apple Developer ID/notarization configured.
+- README includes SmartScreen, Gatekeeper and Linux AppImage instructions.
+
+Functional scope:
+- Conversion engine and Rust conversion backend were not changed in this release.
+- UI/CSS behavior was not changed except for version strings displayed to the user.
+
+Native build:
+- The native Tauri/Rust bundle was not compiled in this environment because Cargo is not installed.
+- GitHub Actions remains responsible for native Windows, macOS and Linux release builds.

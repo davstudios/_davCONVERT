@@ -1,8 +1,10 @@
 [package]
 name = "davconvert"
-version = "1.0.0"
-description = "_davCONVERT desktop application"
+version = "26.10.1"
+description = "_davCONVERT — local batch image converter for Windows, macOS and Linux by _davstudios."
 authors = ["_davstudios"]
+license = "MIT"
+homepage = "https://davstudios.it"
 edition = "2021"
 rust-version = "1.77.2"
 

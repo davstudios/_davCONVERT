@@ -1,5 +1,46 @@
-# Build notes — _davCONVERT v1.0.0
+# Build notes — _davCONVERT v26.10.1
 
-Release stabile. Richiede Node.js/npm e Rust/Cargo. Gli script sincronizzano le dipendenze npm prima dell’avvio o della build. La conversione immagini è implementata in Rust tramite il crate `image` e non richiede servizi online.
+## Requisiti
 
-L’icona principale e tutte le risorse in `src-tauri/icons/` sono state generate dall’`icon.ico` definitivo fornito per la v1.0.0.
+- Node.js 20+
+- npm
+- Rust/Cargo compatibile con Tauri 2
+- dipendenze native Tauri del sistema operativo
+
+## Test
+
+```bash
+npm test
+```
+
+## Sviluppo desktop
+
+```bash
+npm install --no-audit --no-fund
+npm run desktop
+```
+
+## Bundle
+
+```bash
+npm run bundle
+```
+
+La v26.10.1 mantiene invariato il motore di conversione locale e tutti i comportamenti della precedente release stabile. Questa release inaugura il ciclo di ottobre secondo il versioning `_davstudios` `YY.M.REVISIONE`; metadata, automazione bilingue delle GitHub Release e configurazione multipiattaforma restano quelli già validati nella v26.9.1.
+
+## Metadata bundle
+
+- Publisher: `_davstudios`
+- Homepage: `https://davstudios.it`
+- License: `MIT`
+- Copyright: `© 2026 _davstudios`
+- Identifier preservato: `studio.dav.convert`
+- Categoria: `Utility`
+
+## Firma
+
+Le release attuali non usano certificati commerciali di firma Windows né Developer ID/notarizzazione Apple. Il README contiene le istruzioni per gli utenti che incontrano SmartScreen o Gatekeeper.
+
+## Icone bundle
+
+Il set di icone Tauri esistente viene preservato senza modifiche.

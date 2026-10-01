@@ -1,10 +1,10 @@
-@echo off
+﻿@echo off
 setlocal
 cd /d "%~dp0"
-title _davCONVERT v1.0.0
+title _davCONVERT v26.10.1
 
 echo ========================================
-echo          _davCONVERT v1.0.0
+echo          _davCONVERT v26.10.1
 echo ========================================
 echo.
 where node >nul 2>nul || goto node_error
