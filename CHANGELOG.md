@@ -1,5 +1,17 @@
 # Changelog
 
+## 26.10.2
+
+Normalization completa del repository e rafforzamento dei controlli di release senza modifiche funzionali al motore di conversione.
+
+- Versione sincronizzata a `26.10.2` in npm, Tauri, Cargo, lockfile, launcher, interfaccia, test e documentazione.
+- Repository normalization applicata a tutti i file del pacchetto con modifiche reali ma neutre.
+- Controllo versione esteso a `package-lock.json` e `Cargo.lock`, con parser compatibile LF/CRLF e regressione dedicata ai checkout Windows.
+- Rimossi i riferimenti hardcoded alla versione corrente dalla UI: la versione visualizzata viene letta da Tauri.
+- Workflow GitHub Actions rafforzato con verifica completa dei manifest prima della build e della pubblicazione.
+- Asset grafici preservati visivamente durante la normalization binaria.
+- Nessuna modifica al motore di conversione, ai formati supportati, al backend Rust o al comportamento dell'app.
+
 ## 26.10.1
 
 Prima release di ottobre 2026 secondo lo schema `_davstudios` `YY.M.REVISIONE`.
@@ -44,3 +56,4 @@ Standardizzazione della release `_davstudios`, adozione dello schema di versioni
 - Destinazione automatica o cartella personalizzata.
 - Coda risultati con stato per file.
 - Design system, tema, lingua e motion coerenti con _davSPACE e _davCLIPBOARD.
+

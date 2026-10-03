@@ -1,4 +1,4 @@
-# Build notes — _davCONVERT v26.10.1
+# Build notes — _davCONVERT v26.10.2
 
 ## Requisiti
 
@@ -26,7 +26,7 @@ npm run desktop
 npm run bundle
 ```
 
-La v26.10.1 mantiene invariato il motore di conversione locale e tutti i comportamenti della precedente release stabile. Questa release inaugura il ciclo di ottobre secondo il versioning `_davstudios` `YY.M.REVISIONE`; metadata, automazione bilingue delle GitHub Release e configurazione multipiattaforma restano quelli già validati nella v26.9.1.
+La v26.10.2 mantiene invariato il motore di conversione locale e applica una repository normalization completa dell’intero pacchetto, sincronizzazione forte dei manifest e dei lockfile, controllo Cargo.lock compatibile LF/CRLF e versione UI letta direttamente da Tauri.
 
 ## Metadata bundle
 
@@ -44,3 +44,4 @@ Le release attuali non usano certificati commerciali di firma Windows né Develo
 ## Icone bundle
 
 Il set di icone Tauri esistente viene preservato senza modifiche.
+

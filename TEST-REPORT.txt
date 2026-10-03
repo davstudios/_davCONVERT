@@ -1,12 +1,14 @@
-_davCONVERT v26.10.1 — Test report
-Date: 2026-10-01
+_davCONVERT v26.10.2 — Test report
+Date: 2026-10-03
 
-Automated tests: 18/18 passed
+Automated tests: 20/20 passed
 - Conversion engine: passed
 - Project/release contract: passed
 - GitHub Release description automation contract: passed
 - _davstudios package metadata contract: passed
 - Version synchronization: passed
+- Cargo.lock CRLF regression: passed
+- UI dynamic Tauri version contract: passed
 - Source checks: passed
 
 Static validation:
@@ -20,8 +22,8 @@ Static validation:
 - .github/workflows/release.yml: valid YAML
 
 Bundle metadata:
-- Version: 26.10.1
-- Public tag: v26.10.1
+- Version: 26.10.2
+- Public tag: v26.10.2
 - Publisher: _davstudios
 - Homepage: https://davstudios.it
 - License: MIT
@@ -37,8 +39,9 @@ Code signing:
 
 Functional scope:
 - Conversion engine and Rust conversion backend were not changed in this release.
-- UI/CSS behavior was not changed except for version strings displayed to the user.
+- UI behavior is unchanged; the displayed app version is now read directly from Tauri instead of using a release-number fallback.
 
 Native build:
 - The native Tauri/Rust bundle was not compiled in this environment because Cargo is not installed.
 - GitHub Actions remains responsible for native Windows, macOS and Linux release builds.
+

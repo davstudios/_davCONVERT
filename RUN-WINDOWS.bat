@@ -1,10 +1,10 @@
-﻿@echo off
+@echo off
 setlocal
 cd /d "%~dp0"
-title _davCONVERT v26.10.1
+title _davCONVERT v26.10.2
 
 echo ========================================
-echo          _davCONVERT v26.10.1
+echo          _davCONVERT v26.10.2
 echo ========================================
 echo.
 where node >nul 2>nul || goto node_error
@@ -38,3 +38,4 @@ echo.
 echo Copia qui in chat il messaggio mostrato sopra.
 pause
 exit /b 1
+

@@ -7,7 +7,7 @@
 Convertitore batch locale di immagini per Windows, macOS e Linux.  
 Local batch image converter for Windows, macOS and Linux.
 
-**v26.10.1 · Stable · Local-first · No telemetry**
+**v26.10.2 · Stable · Local-first · No telemetry**
 
 Interfaccia e motion system condivisi con la suite `_davstudios`.
 
@@ -118,7 +118,7 @@ Always download releases from the official `_davstudios` GitHub repository. When
 - Homepage: https://davstudios.it
 - License: MIT
 - Bundle identifier: `studio.dav.convert`
-- Current version: `26.10.1`
+- Current version: `26.10.2`
 
 ## Support _davstudios
 
@@ -128,3 +128,4 @@ Buy Me A Coffee: https://buymeacoffee.com/davstudios
 ## License
 
 MIT — see [`LICENSE`](LICENSE).
+
