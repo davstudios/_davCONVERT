@@ -1,6 +1,6 @@
 [package]
 name = "davconvert"
-version = "26.10.2"
+version = "26.10.3"
 description = "_davCONVERT — local batch image converter for Windows, macOS and Linux by _davstudios."
 authors = ["_davstudios"]
 license = "MIT"

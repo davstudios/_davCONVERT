@@ -1,8 +1,8 @@
 # _davCONVERT — Package metadata
 
 - Product name: `_davCONVERT`
-- Version: `26.10.2`
-- Public release tag: `v26.10.2`
+- Version: `26.10.3`
+- Public release tag: `v26.10.3`
 - Developer / Publisher: `_davstudios`
 - Identifier: `studio.dav.convert`
 - Homepage / Support: `https://davstudios.it`

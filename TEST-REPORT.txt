@@ -1,14 +1,18 @@
-_davCONVERT v26.10.2 — Test report
-Date: 2026-10-03
+_davCONVERT v26.10.3 — Test report
+Date: 2026-10-04
 
-Automated tests: 20/20 passed
+Automated tests: 23/23 passed
 - Conversion engine: passed
 - Project/release contract: passed
 - GitHub Release description automation contract: passed
 - _davstudios package metadata contract: passed
+- _davstudios website v52 motion contract: passed
+- Windows GUI subsystem contract: passed
+- Windows child-process console suppression contract: passed
+- README/support contract: passed
 - Version synchronization: passed
 - Cargo.lock CRLF regression: passed
-- UI dynamic Tauri version contract: passed
+- UI version-removal contract: passed
 - Source checks: passed
 
 Static validation:
@@ -20,10 +24,11 @@ Static validation:
 - src-tauri/tauri.conf.json: valid JSON
 - src-tauri/capabilities/default.json: valid JSON
 - .github/workflows/release.yml: valid YAML
+- shell scripts: syntax valid
 
 Bundle metadata:
-- Version: 26.10.2
-- Public tag: v26.10.2
+- Version: 26.10.3
+- Public tag: v26.10.3
 - Publisher: _davstudios
 - Homepage: https://davstudios.it
 - License: MIT
@@ -32,16 +37,26 @@ Bundle metadata:
 - Linux DEB section: utils
 - Linux DEB priority: optional
 
-Code signing:
-- No trusted commercial Windows code-signing certificate configured.
-- No Apple Developer ID/notarization configured.
-- README includes SmartScreen, Gatekeeper and Linux AppImage instructions.
+UI and motion:
+- Release number removed from ordinary UI.
+- Italian Buy Me A Coffee wording: Offrimi Un Caffè.
+- Convert / Queue / Settings navigation uses explicit page exit and entrance motion.
+- Theme switch uses the v52 radial reveal with a reduced-motion fallback.
+
+Windows console behavior:
+- Release executable uses the Windows GUI subsystem.
+- explorer.exe child launch uses CREATE_NO_WINDOW.
 
 Functional scope:
-- Conversion engine and Rust conversion backend were not changed in this release.
-- UI behavior is unchanged; the displayed app version is now read directly from Tauri instead of using a release-number fallback.
+- Conversion engine remains unchanged.
+- Rust image decoding/conversion and output-path logic remain unchanged.
+- Only the reveal-path process launch was adjusted on Windows to suppress an unnecessary console.
 
 Native build:
 - The native Tauri/Rust bundle was not compiled in this environment because Cargo is not installed.
 - GitHub Actions remains responsible for native Windows, macOS and Linux release builds.
 
+Repository normalization:
+- Pre-existing files compared against v26.10.2: 47/47 changed.
+- Newly added README assets: 4.
+- PNG/ICO/ICNS graphical content verified pixel-for-pixel unchanged.

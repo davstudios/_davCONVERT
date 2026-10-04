@@ -14,7 +14,7 @@ const cargoLockVersion=cargoLock.match(/\[\[package\]\]\r?\nname = "davconvert"\
 const mainSource=fs.readFileSync(resolve(root,'src/main.js'),'utf8');
 
 test('versioni tecniche sincronizzate',()=>{
-  assert.equal(packageJson.version,'26.10.2');
+  assert.equal(packageJson.version,'26.10.3');
   assert.equal(packageLock.version,packageJson.version);
   assert.equal(packageLock.packages[''].version,packageJson.version);
   assert.equal(tauri.version,packageJson.version);
@@ -28,8 +28,10 @@ test('Cargo.lock version parser supports Windows CRLF checkouts',()=>{
   assert.equal(parsed,packageJson.version);
 });
 
-test('interfaccia legge versione da Tauri senza fallback di release hardcoded',()=>{
-  assert.match(mainSource,/getVersion/);
-  assert.doesNotMatch(mainSource,/version:'26\.10\.2'/);
+test('versione non viene duplicata nella UI ordinaria',()=>{
+  assert.doesNotMatch(mainSource,/getVersion/);
+  assert.doesNotMatch(mainSource,/state\.version/);
+  assert.doesNotMatch(mainSource,/class="version"/);
+  assert.doesNotMatch(mainSource,/v\$\{/);
+  assert.match(mainSource,/MIT · Open source/);
 });
-

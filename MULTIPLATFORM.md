@@ -1,6 +1,6 @@
 # Supporto multipiattaforma
 
-`_davCONVERT v26.10.2` usa Tauri 2 e Rust. La conversione immagini avviene localmente nel backend Rust tramite il crate `image`; il selettore file usa il plugin dialog ufficiale Tauri.
+`_davCONVERT v26.10.3` usa Tauri 2 e Rust. La conversione immagini avviene localmente nel backend Rust tramite il crate `image`; il selettore file usa il plugin dialog ufficiale Tauri.
 
 ## Windows
 

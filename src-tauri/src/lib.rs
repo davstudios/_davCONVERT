@@ -5,7 +5,12 @@ use std::fs::{self,File};
 use std::io::BufWriter;
 use std::path::{Path,PathBuf};
 use std::process::Command;
+#[cfg(target_os="windows")]
+use std::os::windows::process::CommandExt;
 use tauri::Manager;
+
+#[cfg(target_os="windows")]
+const CREATE_NO_WINDOW:u32=0x08000000;
 
 #[derive(Clone,Serialize)]
 #[serde(rename_all="camelCase")]
@@ -118,7 +123,7 @@ fn reveal_path(path:String)->Result<(),String>{
     let target=PathBuf::from(path);
     let folder=if target.is_dir(){target}else{target.parent().unwrap_or(Path::new(".")).to_path_buf()};
     #[cfg(target_os="windows")]
-    let mut command={let mut cmd=Command::new("explorer");cmd.arg(folder);cmd};
+    let mut command={let mut cmd=Command::new("explorer");cmd.creation_flags(CREATE_NO_WINDOW);cmd.arg(folder);cmd};
     #[cfg(target_os="macos")]
     let mut command={let mut cmd=Command::new("open");cmd.arg(folder);cmd};
     #[cfg(all(unix,not(target_os="macos")))]

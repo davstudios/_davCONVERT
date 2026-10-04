@@ -10,3 +10,4 @@ test('rimuove duplicati per percorso',()=>{const a={path:'a.png'},b={path:'b.png
 test('calcola statistiche conversione',()=>{const stats=conversionStats([{status:'done',size:10,outputSize:8},{status:'error',size:20},{status:'pending',size:30}]);assert.deepEqual(stats,{total:3,done:1,failed:1,pending:1,sourceBytes:60,outputBytes:8});});
 test('mostra nomi formato coerenti',()=>{assert.equal(displayFormat('jpg'),'JPG');assert.equal(displayFormat('tiff'),'TIFF');});
 
+ 

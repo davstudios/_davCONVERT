@@ -9,3 +9,4 @@ export function uniqueFiles(existing,incoming){const map=new Map(existing.map((i
 export function conversionStats(items){const total=items.length;const done=items.filter((item)=>item.status==='done').length;const failed=items.filter((item)=>item.status==='error').length;const pending=total-done-failed;const sourceBytes=items.reduce((sum,item)=>sum+(Number(item.size)||0),0);const outputBytes=items.reduce((sum,item)=>sum+(Number(item.outputSize)||0),0);return{total,done,failed,pending,sourceBytes,outputBytes};}
 export function displayFormat(format){const value=normalizeExtension(format);if(value==='jpg')return 'JPG';if(value==='tiff')return 'TIFF';return value.toUpperCase();}
 
+ 

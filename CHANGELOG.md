@@ -1,3 +1,17 @@
+# CHANGELOG
+
+## 26.10.3
+
+- Allineato il motion system dell'app al linguaggio visivo del sito `_davstudios` v52, con transizioni di pagina, reveal, stagger, hover ed easing condivisi.
+- Aggiunte transizioni reali tra Converti, Coda e Impostazioni e reveal radiale del cambio tema, con supporto `prefers-reduced-motion`.
+- Rimossa la versione dall'interfaccia ordinaria; la versione resta gestita nei manifest tecnici e nelle GitHub Release.
+- Aggiornata la dicitura italiana Buy Me A Coffee a `Offrimi Un Caffè`.
+- Normalizzato il README bilingue e reso indipendente dalla release corrente.
+- Configurata la build Windows Release con GUI subsystem per evitare la finestra CMD separata.
+- Verificato il processo figlio Windows usato per aprire la cartella di output e configurato senza console.
+- Rafforzati i test di contratto per motion v52, UI senza versione, Buy Me A Coffee, Windows GUI subsystem e CRLF.
+- Repository normalization completa senza modificare il motore di conversione locale.
+
 # Changelog
 
 ## 26.10.2
